@@ -4,11 +4,12 @@ public class MovieTicketApp {
 
 	public static void main(String[] args) {
 		// Feature 1 : Login
-		String mobileNo = User.getMobileNo(); // Stores mobile number
-		String password = User.getPassword(); // stores password
+		String mobileNo = UserManager.getMobileNo(); // Stores mobile number
+		String password = UserManager.getPassword(); // stores password
 		// Validates the User Credentials
-		String valid = User.checkLogin(mobileNo, password);
-		System.out.println(valid); // Displays Status of Login
+		String valid = UserValidator.checkUser(mobileNo, password);
+		System.out.println(valid); // Displays Status of Registration
+		UserManager.addUser(mobileNo, password);
 		// Feature 2 : Ticket Manager
 		// Storing Ticket Details
 		TicketManager.getMovieDetails();

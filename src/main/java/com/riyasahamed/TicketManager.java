@@ -23,7 +23,7 @@ public class TicketManager {
 		// Storing No of Tickets 
 		ticket.put("Karnan", 10);
 		ticket.put("Sulthan", 20);
-		ticket.put("Master", 10);
+		ticket.put("Master", 30);
 	}
 
 	public static void displayMovieDetail() {

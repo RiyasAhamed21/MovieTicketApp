@@ -4,16 +4,16 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class UserTest {
+public class UserValidatorTest {
 
 	@Test
 	/*
 	 * In this Test Case Mobile Number and Password are wrongly Entered
 	 */
-	public void testcase1() {
+	public void invalidMobileNoAndPasswordTest() {
 		String mobileNumber = "934544223";
 		String password = "asdff";
-		String actual = User.checkLogin(mobileNumber, password);
+		String actual = UserValidator.checkUser(mobileNumber, password);
 		String expected = "Invalid Mobile Number and Password";
 		assertEquals(actual, expected);
 	}
@@ -22,10 +22,10 @@ public class UserTest {
 	/*
 	 * In this Test Case Mobile Number is Wrongly Entered...
 	 */
-	public void testcase2() {
+	public void invlaidMobileNumberTest() {
 		String mobileNumber = "934544223";
 		String password = "Riiyas@12";
-		String actual = User.checkLogin(mobileNumber, password);
+		String actual = UserValidator.checkUser(mobileNumber, password);
 		String expected = "Invalid Mobile Number";
 		assertEquals(actual, expected);
 
@@ -35,10 +35,10 @@ public class UserTest {
 	/*
 	 * In this Test Case Password is Wrongly Entered...
 	 */
-	public void testcase3() {
+	public void invalidPasswordTest() {
 		String mobileNumber = "9345442250";
 		String password = "Riiyas";
-		String actual = User.checkLogin(mobileNumber, password);
+		String actual = UserValidator.checkUser(mobileNumber, password);
 		String expected = "Invalid Password";
 		assertEquals(actual, expected);
 	}
@@ -47,11 +47,11 @@ public class UserTest {
 	/*
 	 * In this Test Case Both Mobile Number and Password are entered Correctly...
 	 */
-	public void testcase4() {
+	public void validCredentialsTest() {
 		String mobileNumber = "9345442251";
 		String password = "Riiyas@12";
-		String actual = User.checkLogin(mobileNumber, password);
-		String expected = "You are Succesfully Logged In...";
+		String actual = UserValidator.checkUser(mobileNumber, password);
+		String expected = "You are Succesfully Registered...";
 		assertEquals(actual, expected);
 	}
 }
