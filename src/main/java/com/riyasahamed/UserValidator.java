@@ -22,14 +22,14 @@ public class UserValidator {
 	}
 
 	public static String checkUserLogin(String mobileNo, String password) {
-		String valid = "Invalid Credential";
+		String valid = "Invalid Credentials";
 		for (String key : UserManager.user.keySet()) {
 			if (key.equals(mobileNo) && UserManager.user.get(key).equals(password)) {
-				valid = "Valid Credential";
+				valid = "Valid Credentials";
 			} else if (key.equals(mobileNo) && !UserManager.user.get(key).equals(password)) {
 				valid = "Invalid Password";
 			} else if (UserManager.user.get(key).equals(password) && !key.equals(mobileNo)) {
-				valid = "Invalid Username";
+				valid = "Invalid Mobile Number";
 			}
 		}
 		return valid;

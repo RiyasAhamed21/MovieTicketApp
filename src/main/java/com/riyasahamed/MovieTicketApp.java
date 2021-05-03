@@ -10,6 +10,8 @@ public class MovieTicketApp {
 		String valid = UserValidator.checkUser(mobileNo, password);
 		System.out.println(valid); // Displays Status of Registration
 		UserManager.addUser(mobileNo, password);
+		String login=UserValidator.checkUserLogin(mobileNo, password);
+		System.out.println(login);
 		// Feature 2 : Ticket Manager
 		// Storing Ticket Details
 		TicketManager.getMovieDetails();
