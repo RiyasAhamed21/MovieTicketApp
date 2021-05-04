@@ -12,7 +12,6 @@ public class TestDisplay {
 		String movieName = "Karnan";
 		String seatType = "Platinum";
 		int noOfTickets = 6;
-		Display.displayDetails(movieName, seatType, noOfTickets);
-
+		TicketManager.displayDetails(movieName, seatType, noOfTickets);
 	}
 }

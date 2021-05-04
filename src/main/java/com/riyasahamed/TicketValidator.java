@@ -10,11 +10,12 @@ public class TicketValidator {
 	 */
 	public static boolean checkMovie(String movieName) {
 		TicketManager.availableTickets();
-		Set<String> movie = TicketManager.ticket.keySet();
+		Set<String> movies = TicketManager.tickets.keySet();
 		boolean valid = false;
-		for (String name : movie) {
+		for (String name : movies) {
 			if (movieName.equalsIgnoreCase(name)) {
 				valid = true;
+				break;
 			}
 		}
 		return valid;
@@ -27,10 +28,10 @@ public class TicketValidator {
 	 */
 	public static boolean checkTickets(String movieName, int noOfTickets) {
 		TicketManager.availableTickets();
-		int availableTickets = TicketManager.ticket.get(movieName);
+		int availableTickets = TicketManager.tickets.get(movieName);
 		boolean valid = true;
 		if (noOfTickets > availableTickets) {
-			return false;
+			valid = false;
 		}
 		return valid;
 	}

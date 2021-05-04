@@ -9,7 +9,7 @@ public class TicketManager {
 	// Storing Seat details
 	static String[] seat = { "Silver- Rs. 60", "Gold- Rs.120", "Platinum- Rs.190" };
 
-	static HashMap<String, Integer> ticket = new HashMap<String, Integer>();
+	static HashMap<String, Integer> tickets = new HashMap<String, Integer>();
 
 	public static String[] getMovieDetails() {
 		return movie;
@@ -21,9 +21,9 @@ public class TicketManager {
 
 	public static void availableTickets() {
 		// Storing No of Tickets 
-		ticket.put("Karnan", 10);
-		ticket.put("Sulthan", 20);
-		ticket.put("Master", 30);
+		tickets.put("Karnan", 10);
+		tickets.put("Sulthan", 20);
+		tickets.put("Master", 30);
 	}
 
 	public static void displayMovieDetail() {
@@ -44,5 +44,14 @@ public class TicketManager {
 			System.out.println(type);
 		}
 		System.out.println("****************************************");
+	}
+	
+	/* 
+	 * This Method Displays the Booking Details */
+	public static void displayDetails(String movieName, String seatType, int noOfTickets) {
+		System.out.println("******************Ticket Details************************");
+		System.out.println("Movie : " + movieName);
+		System.out.println("Seat Type :" + seatType);
+		System.out.println("No Of Tickets : " + noOfTickets);
 	}
 }

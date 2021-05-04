@@ -8,27 +8,27 @@ public class UserValidator {
 	 * @param password
 	 * @return
 	 */
-	public static String checkUser(String mobileNumber, String password) {
+	public static String checkUser(Long mobileNumber, String password) {
 		String mobileNumberStr = String.valueOf(mobileNumber);
 		String s = "You are Succesfully Registered...";
-		if ((mobileNumberStr.length() < 10) && (password.length() < 8)) {
+		if ((mobileNumberStr.trim().length() < 10) && (password.trim().length() < 8)) {
 			s = "Invalid Mobile Number and Password";
-		} else if (password.length() < 8) {
+		} else if (password.trim().length() < 8 || password==null) {
 			s = "Invalid Password";
-		} else if (mobileNumberStr.length() < 10) {
+		} else if (mobileNumberStr.length() < 10 || mobileNumberStr==null) {
 			s = "Invalid Mobile Number";
 		}
 		return s;
 	}
 
-	public static String checkUserLogin(String mobileNo, String password) {
+	public static String checkUserLogin(Long mobileNo, String password) {
 		String valid = "Invalid Credentials";
-		for (String key : UserManager.user.keySet()) {
-			if (key.equals(mobileNo) && UserManager.user.get(key).equals(password)) {
+		for (Long key : UserManager.users.keySet()) {
+			if (key.equals(mobileNo) && UserManager.users.get(key).equals(password)) {
 				valid = "Valid Credentials";
-			} else if (key.equals(mobileNo) && !UserManager.user.get(key).equals(password)) {
+			} else if (key.equals(mobileNo) && !UserManager.users.get(key).equals(password)) {
 				valid = "Invalid Password";
-			} else if (UserManager.user.get(key).equals(password) && !key.equals(mobileNo)) {
+			} else if (UserManager.users.get(key).equals(password) && !key.equals(mobileNo)) {
 				valid = "Invalid Mobile Number";
 			}
 		}

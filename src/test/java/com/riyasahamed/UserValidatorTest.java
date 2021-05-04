@@ -11,11 +11,11 @@ public class UserValidatorTest {
 	 * In this Test Case Mobile Number and Password are wrongly Entered
 	 */
 	public void invalidMobileNoAndPasswordTest() {
-		String mobileNumber = "934544223";
+		Long mobileNumber = 934544223l;
 		String password = "asdff";
 		String actual = UserValidator.checkUser(mobileNumber, password);
 		String expected = "Invalid Mobile Number and Password";
-		assertEquals(actual, expected);
+		assertEquals(expected, actual);
 	}
 
 	@Test
@@ -23,11 +23,11 @@ public class UserValidatorTest {
 	 * In this Test Case Mobile Number is Wrongly Entered...
 	 */
 	public void invlaidMobileNumberTest() {
-		String mobileNumber = "934544223";
+		Long mobileNumber = 934544223l;
 		String password = "Riiyas@12";
 		String actual = UserValidator.checkUser(mobileNumber, password);
 		String expected = "Invalid Mobile Number";
-		assertEquals(actual, expected);
+		assertEquals(expected, actual);
 
 	}
 
@@ -36,22 +36,22 @@ public class UserValidatorTest {
 	 * In this Test Case Password is Wrongly Entered...
 	 */
 	public void invalidPasswordTest() {
-		String mobileNumber = "9345442250";
+		Long mobileNumber = 9345442250l;
 		String password = "Riiyas";
 		String actual = UserValidator.checkUser(mobileNumber, password);
 		String expected = "Invalid Password";
-		assertEquals(actual, expected);
+		assertEquals(expected, actual);
 	}
 
 	@Test
 	/*
 	 * In this Test Case Both Mobile Number and Password are entered Correctly...
-	 */
-	public void validCredentialsTest() {
-		String mobileNumber = "9345442251";
+	 */	
+	public void testWithValidCredentials() {
+		Long mobileNumber=9345442250l;
 		String password = "Riiyas@12";
 		String actual = UserValidator.checkUser(mobileNumber, password);
 		String expected = "You are Succesfully Registered...";
-		assertEquals(actual, expected);
+		assertEquals(expected, actual);
 	}
 }

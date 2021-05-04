@@ -4,9 +4,9 @@ public class MovieTicketApp {
 
 	public static void main(String[] args) {
 		// Feature 1 : Login
-		String mobileNo = UserManager.getMobileNo(); // Stores mobile number
-		String password = UserManager.getPassword(); // stores password
-		// Validates the User Credentials
+		Long mobileNo =9345442250l; //stores mobile Number
+		String password ="Riiyas@12"; // stores password
+		// Validates the User Credentials 
 		String valid = UserValidator.checkUser(mobileNo, password);
 		System.out.println(valid); // Displays Status of Registration
 		UserManager.addUser(mobileNo, password);
@@ -30,12 +30,12 @@ public class MovieTicketApp {
 		boolean validTickets = TicketValidator.checkTickets(movieName, noOfTickets);
 		// Feature 4: Pricing
 		if (validMovie && validTickets) {
-			// Displays Ticket Details
-			Display.displayDetails(movieName, seatType, noOfTickets);
 			// calculates Base Price
 			int basePrice = Pricing.calulateBasePrice(seatType, noOfTickets);
 			// calculates price with GST
 			float totalPrice = Pricing.totalPrice(basePrice, 8);
+			// Displays Ticket Details
+			TicketManager.displayDetails(movieName, seatType, noOfTickets);
 			// Displays Price Details
 			System.out.println("Base Price is :Rs. " + basePrice);
 			System.out.println("Total Price is :Rs. " + totalPrice);
