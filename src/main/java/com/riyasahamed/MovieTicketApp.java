@@ -20,6 +20,7 @@ public class MovieTicketApp {
 		// Displays Ticket Details
 		TicketManager.displayMovieDetail();
 		TicketManager.displaySeatDetails();
+		//Entering Movie Details
 		String movieName = "Karnan";
 		String seatType = "Platinum";
 		int noOfTickets = 6;
