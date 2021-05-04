@@ -20,15 +20,19 @@ public class UserValidator {
 		}
 		return s;
 	}
-
+	/*
+	 * This Method Validates the User Login
+	 */
+	
 	public static String checkUserLogin(Long mobileNo, String password) {
 		String valid = "Invalid Credentials";
 		for (Long key : UserManager.users.keySet()) {
-			if (key.equals(mobileNo) && UserManager.users.get(key).equals(password)) {
+			String pass = UserManager.users.get(key);
+			if (key.equals(mobileNo) && pass.equals(password)) {
 				valid = "Valid Credentials";
-			} else if (key.equals(mobileNo) && !UserManager.users.get(key).equals(password)) {
+			} else if (key.equals(mobileNo) && !pass.equals(password)) {
 				valid = "Invalid Password";
-			} else if (UserManager.users.get(key).equals(password) && !key.equals(mobileNo)) {
+			} else if (pass.equals(password) && !key.equals(mobileNo)) {
 				valid = "Invalid Mobile Number";
 			}
 		}

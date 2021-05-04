@@ -7,13 +7,13 @@ public class UserManager {
 	static HashMap<Long, String> users = new HashMap<Long, String>();
 
 	/*
-	 * This Method add User
+	 * This Method is used to add the  User
 	 */
 	public static void addUser(Long mobileNo, String password) {
 		users.put(mobileNo, password);
 	}
 	/*
-	 * This Method Remove User
+	 * This Method is used to Remove the User
 	 */
 	
 	public static void removeUser(Long mobileNo) {

@@ -24,17 +24,4 @@ public class TicketValidatorTest {
 		assertTrue(valid);
 	}
 
-	@Test
-	public void testValidMovieName() {
-		String movieName = "Master";
-		boolean valid = TicketValidator.checkMovie(movieName);
-		assertTrue(valid);
-	}
-
-	@Test
-	public void testInvalidMovieName() {
-		String movieName = "Asuran";
-		boolean valid = TicketValidator.checkMovie(movieName);
-		assertFalse(valid);
-	}
 }

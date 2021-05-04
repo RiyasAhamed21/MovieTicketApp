@@ -11,7 +11,7 @@ public class TicketManagerTest {
 	 */
 	@Test
 	public void testMovie() {
-		String[] movieDetails = TicketManager.getMovieDetails();
+		String[] movieDetails = MovieManager.getMovieDetails();
 		assertEquals(3, movieDetails.length);
 	}
 

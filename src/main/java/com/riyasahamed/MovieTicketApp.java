@@ -14,11 +14,11 @@ public class MovieTicketApp {
 		System.out.println(login);
 		// Feature 2 : Ticket Manager
 		// Storing Ticket Details
-		TicketManager.getMovieDetails();
+		MovieManager.getMovieDetails();
 		TicketManager.getSeatDetails();
 		TicketManager.availableTickets();
 		// Displays Ticket Details
-		TicketManager.displayMovieDetail();
+		MovieManager.displayMovieDetail();
 		TicketManager.displaySeatDetails();
 		//Entering Movie Details
 		String movieName = "Karnan";
@@ -26,7 +26,7 @@ public class MovieTicketApp {
 		int noOfTickets = 6;
 		// Feature 3 : Validation
 		// Validates Movie
-		boolean validMovie = TicketValidator.checkMovie(movieName);
+		boolean validMovie = MovieValidator.checkMovie(movieName);
 		// Checks availability of Tickets
 		boolean validTickets = TicketValidator.checkTickets(movieName, noOfTickets);
 		// Feature 4: Pricing

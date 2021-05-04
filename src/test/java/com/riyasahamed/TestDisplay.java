@@ -8,7 +8,7 @@ public class TestDisplay {
 
 	public static void main(String[] args) {
 		TicketManager.displaySeatDetails(); // Displays Seat Types
-		TicketManager.displayMovieDetail(); // Displays Movie Details
+		MovieManager.displayMovieDetail(); // Displays Movie Details
 		String movieName = "Karnan";
 		String seatType = "Platinum";
 		int noOfTickets = 6;
