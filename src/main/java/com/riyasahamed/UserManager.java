@@ -17,9 +17,12 @@ public class UserManager {
 	 */
 	
 	public static void removeUser(Long mobileNo) {
-		if (users.containsKey(mobileNo)) {
+		if (users.containsKey(mobileNo)) 
+		{
 			users.remove(mobileNo);
-		} else {
+		} 
+		else 
+		{
 			System.out.println("Mobile Number Not Registered");
 		}
 	}

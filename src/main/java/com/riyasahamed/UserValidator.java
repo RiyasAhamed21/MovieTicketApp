@@ -2,7 +2,7 @@ package com.riyasahamed;
 
 public class UserValidator {
 	/**
-	 * This Method Validates the User Credentials
+	 * This Method Validates the User Credentials for Registration
 	 * 
 	 * @param mobileNumber
 	 * @param password

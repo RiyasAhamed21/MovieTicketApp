@@ -11,7 +11,9 @@ public class MovieTicketApp {
 		System.out.println(valid); // Displays Status of Registration
 		if(valid.equalsIgnoreCase("You are Succesfully Registered...")) {
 		UserManager.addUser(mobileNo, password);
-		String login=UserValidator.checkUserLogin(mobileNo, password);
+		Long mobileNo1 =9345442250l;
+		String password1 ="Riiyas@12";
+		String login=UserValidator.checkUserLogin(mobileNo1, password1);
 		System.out.println(login);
 		if(login.equalsIgnoreCase("Valid Credentials")) {
 		// Feature 2 : Ticket Manager
