@@ -9,9 +9,11 @@ public class MovieTicketApp {
 		// Validates the User Credentials 
 		String valid = UserValidator.checkUser(mobileNo, password);
 		System.out.println(valid); // Displays Status of Registration
+		if(valid.equalsIgnoreCase("You are Succesfully Registered...")) {
 		UserManager.addUser(mobileNo, password);
 		String login=UserValidator.checkUserLogin(mobileNo, password);
 		System.out.println(login);
+		if(login.equalsIgnoreCase("Valid Credentials")) {
 		// Feature 2 : Ticket Manager
 		// Storing Ticket Details
 		MovieManager.getMovieDetails();
@@ -46,5 +48,10 @@ public class MovieTicketApp {
 		}
 
 	}
-
+		}
+		else {
+			System.out.println("Invalid Login Credentials");
+		}
+		
+		}
 }
